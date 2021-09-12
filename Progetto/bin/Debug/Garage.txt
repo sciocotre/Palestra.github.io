@@ -1,0 +1,5 @@
+ferrari;modello;targa;D:\MATTIA\immagini\Sfondi\2g3w9uf0hfk61.jpg;si;cod;
+marca;modello;targa;D:\MATTIA\immagini\Sfondi\2g3w9uf0hfk61.jpg;si;cod;
+aaaaaaaaaaaaaaaa;aasssssssssssssss;ddddddddddddd;D:\MATTIA\immagini\Catture di schermata\Screenshot (1).png;si;fgggdfsdsfd;
+nuova;moto;targadeldrago;D:\MATTIA\download\mate (9).jpeg;si;codicesupremo;
+asdsad;aaaaaaaaaaaaaaaa;aaaaaaaaaaaaaaaa;D:\MATTIA\download\mate (7).jpeg;si;aaaaaaaaaaaaaaaa;

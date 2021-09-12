@@ -1,0 +1,52 @@
+﻿<Window x:Class="Progetto.AdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Progetto"
+        mc:Ignorable="d"
+        Title="AdminPage" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="MOTO POSSEDUTE" Height="22" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="579*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Marca:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,165,0,0" Height="25" Width="60" Grid.Column="2"/>
+                    <Label Content="Modello:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,205,0,0" Height="25" Width="60" Grid.Column="2"/>
+                    <Label Content="Targa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,245,0,0" Height="26" Width="60" Grid.Column="2"/>
+                    <Button Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="80,285,0,0" Click="Precedente" FontSize="14" Height="25" Grid.Column="2"/>
+                    <Button Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="210,285,0,0" Click="Successiva" FontSize="14" Height="25" Grid.Column="2"/>
+                    <Image x:Name="immagine" HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="195" Margin="90,10,0,0" Grid.Column="2"/>
+                    <Label x:Name="m1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,165,0,0" Height="25" Width="155" Grid.Column="2"/>
+                    <Label x:Name="m2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,205,0,0" Height="25" Width="120" Grid.Column="2" RenderTransformOrigin="1.333,2.6"/>
+                    <Label x:Name="t" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,246,0,0" Height="34" Width="120" Grid.Column="2"/>
+                    <Button Content="Mostra moto" Grid.Column="2" HorizontalAlignment="Left" Margin="125,285,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="Button_Click_1"/>
+                    <Button Content="RITORNA" Grid.Column="2" HorizontalAlignment="Left" Margin="125,315,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="ritorna"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="AGGIUNGI MOTO">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77*"/>
+                        <ColumnDefinition Width="689*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Marca:" Grid.Column="1" HorizontalAlignment="Left" Margin="107,99,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Modello:" Grid.Column="1" HorizontalAlignment="Left" Margin="107,125,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Targa:" Grid.Column="1" HorizontalAlignment="Left" Margin="107,151,0,0" VerticalAlignment="Top"/>
+                    <Button Content="immagine" Grid.Column="1" HorizontalAlignment="Left" Margin="107,204,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+                    <TextBox x:Name="marca" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="157,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox x:Name="modello" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="164,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                    <TextBox x:Name="targa" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="164,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Image x:Name="img" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="275" Margin="390,28,0,0" Grid.Column="1"/>
+                    <Button Content="AGGIUNGI AL DATABASE" Grid.Column="1" HorizontalAlignment="Left" Margin="202,240,0,0" VerticalAlignment="Top" Width="143" Height="30" Click="AggiornaDatabase"/>
+                    <Label Content="Codice Univoco" Grid.Column="1" HorizontalAlignment="Left" Margin="107,176,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="codiceunivoco" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="197,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

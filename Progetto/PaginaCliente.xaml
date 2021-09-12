@@ -1,0 +1,53 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Progetto"
+        xmlns:QrWebCam="clr-namespace:QrWebCam;assembly=QrWebCam" x:Class="Progetto.PaginaCliente"
+        mc:Ignorable="d"
+        Title="PaginaCliente" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="MOTO DISPONIBILI">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="177*"/>
+                        <ColumnDefinition Width="589*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="immagine" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="155,60,0,0" Grid.Column="1"/>
+                    <Label Content="Marca:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139,164,0,0" Grid.Column="1"/>
+                    <Label Content="Modello:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139,195,0,0" Grid.Column="1"/>
+                    <Label Content="Targa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139,226,0,0" Grid.Column="1"/>
+                    <Label x:Name="marca" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="201,164,0,0" Width="154" Grid.Column="1"/>
+                    <Label x:Name="modello" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="201,195,0,0" Width="154" Grid.Column="1"/>
+                    <Label x:Name="targa" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="201,226,0,0" Width="154" Grid.Column="1"/>
+                    <Button Content="&lt;" HorizontalAlignment="Left" Margin="120,257,0,0" VerticalAlignment="Top" Width="36" Height="28" Click="Button_Click_2" Grid.Column="1"/>
+                    <Button Content="&gt;" HorizontalAlignment="Left" Margin="240,257,0,0" VerticalAlignment="Top" Width="36" Height="28" Click="Button_Click_3" Grid.Column="1"/>
+                    <Button Content="Mostra" HorizontalAlignment="Left" Margin="176,257,0,0" VerticalAlignment="Top" Width="45" Height="28" Click="Button_Click" Grid.Column="1"/>
+                    <Button Content="Noleggia" HorizontalAlignment="Left" Margin="155,305,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_1" Grid.Column="1"/>
+                    <Image x:Name="img1" HorizontalAlignment="Left" Height="192" Margin="10,93,0,0" VerticalAlignment="Top" Width="227" Grid.ColumnSpan="2"/>
+                    <Button Content="RITORNA" Grid.Column="1" HorizontalAlignment="Left" Margin="155,330,0,0" VerticalAlignment="Top" Width="85" Height="20" Click="ritorna"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="MOTO IN POSSESSO ORA">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="709*"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="camSelect" Grid.Column="1" HorizontalAlignment="Left" Margin="260,33,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="camSelect_SelectionChanged_1"/>
+                    <QrWebCam:QrWebCamControl Loaded="Window_Loaded" x:Name="webCam" QrDecoded="QrWebCamControl_QrDecoded" Margin="180,60,247,126" Grid.Column="1" />
+                    <Label Content="Marca:" Grid.Column="1" HorizontalAlignment="Left" Margin="212,250,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Label Content="Modello:" Grid.Column="1" HorizontalAlignment="Left" Margin="212,276,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Label Content="Targa:" Grid.Column="1" HorizontalAlignment="Left" Margin="212,302,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Label x:Name="marcaautoinpossesso" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="280,250,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Label x:Name="modelloautoinpossesso" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="280,276,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Label x:Name="targaautoinpossesso" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="280,302,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Image x:Name="immagine1" Grid.Column="1" HorizontalAlignment="Left" Height="141" Margin="467,220,0,0" VerticalAlignment="Top" Width="148"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
