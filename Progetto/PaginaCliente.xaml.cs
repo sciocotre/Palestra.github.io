@@ -103,7 +103,7 @@ namespace Progetto
             QRCode qrCode = new QRCode(qrCodeData);
             qrCodeImage = qrCode.GetGraphic(20);
             listac2 = new List<Cliente>();            
-            qrCodeImage.Save("D:\\MATTIA\\scuola\\Informatica\\github\\Progetto.github.io\\Progetto\\bin\\Debug\\Qr\\" + "ciaooo" + ".jpeg", ImageFormat.Jpeg);
+            qrCodeImage.Save("D:\\MATTIA\\scuola\\Informatica\\github\\Progetto.github.io\\Progetto\\bin\\Debug\\Qr\\" + nome+password + ".jpeg", ImageFormat.Jpeg);
             img1.Source = BitmapToImageSource(qrCodeImage);
             for(int i = 0; i < listac.Count; i++)
             {
